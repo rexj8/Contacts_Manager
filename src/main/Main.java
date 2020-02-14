@@ -22,7 +22,21 @@ public class Main {
         String lgnPswrd = sc.nextLine();
 
         if (lgn.checkID(lgnID) && lgn.checkPswrd(lgnPswrd)) {
-            System.out.println("                      Welcome Sir!");
+            System.out.println("                        Welcome Sir!");
+
+            while (true) {
+                System.out.println("\n===============");
+                System.out.println("   MAIN MENU   ");
+                System.out.println("===============");
+                System.out.println("1. SHOW list");
+                System.out.println("2. ADD your data");
+                System.out.println("3. REMOVE some data");
+                System.out.println("4. OPEN url");
+                System.out.println("5. EXIT");
+
+                int inpMENU = sc.nextInt();
+                break;
+            }
 
         }
 
