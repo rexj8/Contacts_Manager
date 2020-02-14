@@ -1,10 +1,12 @@
 package definition;
 
+import adt.EncADT;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Encryption {
+public class Encryption implements EncADT {
 
     /*
      * This method takes String password and convert it into it's hash form
