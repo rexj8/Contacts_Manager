@@ -48,5 +48,38 @@ public class Encryption {
         }
     }
 
+    public static String ceaserCypherEncode(String pswrd) {
+        char[] temparr = pswrd.toCharArray();
+
+        for (int i = 0; i < pswrd.length(); i++) {
+            if ((int) pswrd.charAt(i) >= 65 && (int) pswrd.charAt(i) < 90) {
+                temparr[i] = (char) (((int) pswrd.charAt(i)) + 1);
+            } else if ((int) pswrd.charAt(i) >= 97 && (int) pswrd.charAt(i) < 122) {
+                temparr[i] = (char) (((int) pswrd.charAt(i)) + 1);
+            } else if ((int) pswrd.charAt(i) == 90) temparr[i] = 'A';
+
+            else if ((int) pswrd.charAt(i) == 122) temparr[i] = 'a';
+        }
+        String cypherText = new String(temparr);
+
+        return cypherText;
+    }
+
+    public static String ceaserCypherDecode(String cypherText) {
+        char[] temparr = cypherText.toCharArray();
+
+        for (int i = 0; i < cypherText.length(); i++) {
+            if ((int) cypherText.charAt(i) > 65 && (int) cypherText.charAt(i) <= 90) {
+                temparr[i] = (char) (((int) cypherText.charAt(i)) - 1);
+            } else if ((int) cypherText.charAt(i) > 97 && (int) cypherText.charAt(i) <= 122) {
+                temparr[i] = (char) (((int) cypherText.charAt(i)) - 1);
+            } else if ((int) cypherText.charAt(i) == 65) temparr[i] = 'Z';
+
+            else if ((int) cypherText.charAt(i) == 97) temparr[i] = 'z';
+        }
+        String pswd = new String(temparr);
+
+        return pswd;
+    }
 
 }
