@@ -28,10 +28,10 @@ public class Main {
                 System.out.println("\n===============");
                 System.out.println("   MAIN MENU   ");
                 System.out.println("===============");
-                System.out.println("1. SHOW list");
-                System.out.println("2. ADD your data");
-                System.out.println("3. REMOVE some data");
-                System.out.println("4. OPEN url");
+                System.out.println("1. SHOW Contacts list");
+                System.out.println("2. ADD Contacts");
+                System.out.println("3. REMOVE Contacts");
+                System.out.println("4. Search Contacts");
                 System.out.println("5. EXIT");
 
                 int inpMENU = sc.nextInt();
