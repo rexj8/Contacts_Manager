@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Enter Login Password :-");
         String lgnPSWRD = sc.nextLine();
 
-        if (lgn.checkID(lgnID)) {
+        if (lgn.checkID(lgnID) && lgn.checkPswrd(lgnPSWRD)) {
 
         }
 

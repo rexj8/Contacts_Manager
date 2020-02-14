@@ -18,5 +18,14 @@ public class Login {
         return response;
     }
 
+    public boolean checkPswrd(String pswrd) {
+        this.pswrd = pswrd;
+        boolean response = false;
+        String countstr = Encryption.SHA1(pswrd);
+
+        if (countstr.equals("dc76e9f0c0006e8f919e0c515c66dbba3982f785") && count == 0) response = true;
+
+        return response;
+    }
 
 }
