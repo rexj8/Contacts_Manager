@@ -14,7 +14,7 @@ public class Encryption implements EncADT {
      * @param String password
      * @return It returns encrypted form of password
      */
-    public static String MD5(String pswrd) {
+    public String MD5(String pswrd) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] messageDigest = md.digest(pswrd.getBytes());
@@ -32,7 +32,7 @@ public class Encryption implements EncADT {
 
     }
 
-    public static String SHA1(String pswrd) {
+    public String SHA1(String pswrd) {
 
         try {
 
@@ -50,7 +50,7 @@ public class Encryption implements EncADT {
         }
     }
 
-    public static String ceaserCypherEncode(String pswrd) {
+    public String ceaserCypherEncode(String pswrd) {
         char[] temparr = pswrd.toCharArray();
 
         for (int i = 0; i < pswrd.length(); i++) {
@@ -67,7 +67,7 @@ public class Encryption implements EncADT {
         return cypherText;
     }
 
-    public static String ceaserCypherDecode(String cypherText) {
+    public String ceaserCypherDecode(String cypherText) {
         char[] temparr = cypherText.toCharArray();
 
         for (int i = 0; i < cypherText.length(); i++) {

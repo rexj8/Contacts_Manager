@@ -10,12 +10,19 @@ public class Main {
         Login lgn = new Login();
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter Login ID");
-        String lgnID = sc.nextLine();
-        System.out.println("Enter Login Password :-");
-        String lgnPSWRD = sc.nextLine();
+        System.out.println();
+        System.out.println("_______________Contacts_Manager_______________\n");
+        System.out.println("================");
+        System.out.println("   LOGIN MENU   ");
+        System.out.println("================");
 
-        if (lgn.checkID(lgnID) && lgn.checkPswrd(lgnPSWRD)) {
+        System.out.println("Enter Login ID");
+        String lgnID = sc.nextLine().toLowerCase();
+        System.out.println("Enter Login Password :-");
+        String lgnPswrd = sc.nextLine();
+
+        if (lgn.checkID(lgnID) && lgn.checkPswrd(lgnPswrd)) {
+            System.out.println("                      Welcome Sir!");
 
         }
 
