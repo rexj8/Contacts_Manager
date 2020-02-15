@@ -35,7 +35,10 @@ public class Main {
                 System.out.println("5. EXIT");
 
                 int inpMENU = sc.nextInt();
-                break;
+
+                if (inpMENU == 1) {
+
+                }
             }
 
         }
