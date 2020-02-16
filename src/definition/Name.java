@@ -43,8 +43,8 @@ public class Name implements NameADT {
 
             int row = pstmt.executeUpdate();
 
-            System.out.println(row);
-            System.out.println("               Successfully Removed");
+            System.out.println(row + "rows affected");
+//            System.out.println("               Successfully Removed");
 
         } catch (SQLException e) {
             e.printStackTrace();
