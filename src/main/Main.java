@@ -63,8 +63,8 @@ public class Main {
             phoneNumber.addIntoDB(number, name);
         } else if (inpMENU == 3) {
             System.out.println("Enter contact name which you have to REMOVE :-");
-            String name = sc.next();
-            nm.delFromDB(name);
+            String removeName = sc.next();
+            nm.delFromDB(removeName);
         } else if (inpMENU == 4) {
 
             System.out.println("Search Text :-");
