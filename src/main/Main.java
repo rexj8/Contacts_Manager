@@ -11,11 +11,11 @@ public class Main {
 
     public static void main(String[] args) {
         Login lgn = new Login();
+        Name nm = new Name();
+        PhoneNumber phoneNumber = new PhoneNumber();
         Scanner sc = new Scanner(System.in);
         ArrayList arrayListName = new ArrayList<String>();
         ArrayList arrayListNumber = new ArrayList<String>();
-        Name nm = new Name();
-        PhoneNumber phoneNumber = new PhoneNumber();
 
 //        System.out.println();
 //        System.out.println("_______________Contacts_Manager_______________\n");
@@ -44,11 +44,6 @@ public class Main {
         int inpMENU = sc.nextInt();
 
         if (inpMENU == 1) {
-//            System.out.println("   1. Search by NAME");
-//            System.out.println("   2. Search by NUMBER");
-//            System.out.print("   ");
-//            int n = sc.nextInt();
-
             arrayListName = nm.getFromDB();
             arrayListNumber = phoneNumber.getFromDB();
 
@@ -57,7 +52,10 @@ public class Main {
                 System.out.println(arrayListName.get(i) + "   " + arrayListNumber.get(i));
                 i++;
             }
+        } else if (inpMENU == 4) {
+
         }
+
 //            }
 
 //        }

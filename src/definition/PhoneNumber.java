@@ -27,18 +27,22 @@ public class PhoneNumber implements PhoneNumberADT {
             Statement stmt = con.createStatement();
 
             ResultSet rs = stmt.executeQuery("SELECT * FROM CONTACTS;");
-            System.out.println();
-            long phnno;
+
             while (rs.next()) {
                 number = rs.getString("phnno");
                 arrayList.add(number);
             }
-
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
         return arrayList;
+    }
+
+    public String getNumber() {
+        number = "";
+
+        return number;
     }
 }
