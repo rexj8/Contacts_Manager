@@ -31,17 +31,17 @@ public class Main {
 //        if (lgn.checkID(lgnID) && lgn.checkPswrd(lgnPswrd)) {
         System.out.println("                        Welcome Sir!");
 
-//            while (true) {
-        System.out.println("\n===============");
-        System.out.println("   MAIN MENU   ");
-        System.out.println("===============");
-        System.out.println("1. SHOW Contacts list");
-        System.out.println("2. ADD Contacts");
-        System.out.println("3. REMOVE Contacts");
-        System.out.println("4. Search Contacts");
-        System.out.println("5. EXIT");
+            while (true) {
+                System.out.println("\n===============");
+                System.out.println("   MAIN MENU   ");
+                System.out.println("===============");
+                System.out.println("1. SHOW Contacts list");
+                System.out.println("2. ADD Contacts");
+                System.out.println("3. REMOVE Contacts");
+                System.out.println("4. Search Contacts");
+                System.out.println("5. EXIT");
 
-        int inpMENU = sc.nextInt();
+                int inpMENU = sc.nextInt();
 
         if (inpMENU == 1) {
             linkedListName = nm.getFromDB();
@@ -52,7 +52,7 @@ public class Main {
                 System.out.println(linkedListName.get(i) + "   " + linkedListNumber.get(i));
                 i++;
             }
-            System.out.println("\n Total Contacts :- " + linkedListName.size);
+            System.out.println("\nTotal Contacts :- " + linkedListName.size);
         } else if (inpMENU == 2) {
             System.out.println("Enter a NAME :-");
             String name = sc.next();
@@ -92,10 +92,7 @@ public class Main {
             System.exit(0);
         }
         }
-
-
-
-//        }
+    }
 
 //    }
 

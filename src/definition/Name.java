@@ -54,6 +54,8 @@ public class Name implements NameADT {
 
     @Override
     public LinkedList<String> getFromDB() {
+        linkedList = new LinkedList<>();
+
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Contacts_Manager?autoReconnect=true&useSSL=false", "root", "root");
             Statement stmt = con.createStatement();
