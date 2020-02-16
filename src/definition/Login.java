@@ -1,12 +1,15 @@
 package definition;
 
-public class Login {
+import adt.LoginADT;
+
+public class Login implements LoginADT {
 
     private String id;
     private String pswrd;
     private int count;
 
     Encryption encr = new Encryption();
+
 
     public boolean checkID(String id) {
         this.id = id;
