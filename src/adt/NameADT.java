@@ -1,11 +1,10 @@
 package adt;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface NameADT {
 
-    String addIntoDB(String name) throws SQLException;
+    String addIntoDB(String name);
 
     void delFromDB(String name);
 

@@ -1,13 +1,12 @@
 package adt;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface PhoneNumberADT {
 
-    String addIntoDB(String name) throws SQLException;
+    String addIntoDB(String number);
 
-    void delFromDB(String name);
+    void delFromDB(String number);
 
     ArrayList getFromDB();
 
