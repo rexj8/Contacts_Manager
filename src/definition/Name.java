@@ -29,7 +29,7 @@ public class Name implements NameADT {
             Statement stmt = con.createStatement();
 
             ResultSet rs = stmt.executeQuery("SELECT * FROM CONTACTS;");
-            System.out.println("");
+            System.out.println();
             long phnno;
             while (rs.next()) {
                 name = rs.getString("name");

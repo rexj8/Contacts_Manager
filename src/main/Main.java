@@ -39,12 +39,12 @@ public class Main {
         int inpMENU = sc.nextInt();
 
         if (inpMENU == 1) {
-            System.out.println("   1. Search by NAME");
-            System.out.println("   2. Search by NUMBER");
-            System.out.print("   ");
-            int n = sc.nextInt();
+//            System.out.println("   1. Search by NAME");
+//            System.out.println("   2. Search by NUMBER");
+//            System.out.print("   ");
+//            int n = sc.nextInt();
 
-            if (n == 1) nm.getFromDB("njk");
+            nm.getFromDB("njk");
         }
 //            }
 
