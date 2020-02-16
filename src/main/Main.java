@@ -91,7 +91,13 @@ public class Main {
         } else if (inpMENU == 5) {
             System.exit(0);
         }
-        }
+
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
     }
 
 //    }else{System.out.println("Enter valid input!!");}
