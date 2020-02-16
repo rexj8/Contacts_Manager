@@ -41,4 +41,10 @@ public class Name implements NameADT {
 
         return arrayList;
     }
+
+    public String getName() {
+        name = "";
+
+        return name;
+    }
 }

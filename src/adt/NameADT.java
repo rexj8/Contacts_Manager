@@ -10,4 +10,6 @@ public interface NameADT {
 
     ArrayList getFromDB();
 
+    String getName();
+
 }
