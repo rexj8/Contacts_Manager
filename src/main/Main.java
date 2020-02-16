@@ -16,7 +16,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         LinkedList<String> linkedListName = new LinkedList<String>();
         LinkedList<String> linkedListNumber = new LinkedList<String>();
-        LinkedList<String> linkedListComb = new LinkedList<>();
 
 //        System.out.println();
 //        System.out.println("_______________Contacts_Manager_______________\n");
@@ -80,7 +79,6 @@ public class Main {
             String strtemp;
             while (i < linkedListName.size) {
                 strtemp = linkedListName.get(i) + "   " + linkedListNumber.get(i);
-//                linkedListComb.add(strtemp);
 
                 if (strtemp.indexOf(text) != -1) {
                     count += 1;
