@@ -16,6 +16,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         LinkedList<String> linkedListName = new LinkedList<String>();
         LinkedList<String> linkedListNumber = new LinkedList<String>();
+        LinkedList<String> linkedListComb = new LinkedList<>();
 
 //        System.out.println();
 //        System.out.println("_______________Contacts_Manager_______________\n");
@@ -66,6 +67,25 @@ public class Main {
             String name = sc.next();
             nm.delFromDB(name);
         } else if (inpMENU == 4) {
+
+            System.out.println("Enter the Searchable Text :-");
+            String text = sc.next();
+
+            linkedListName = nm.getFromDB();
+            linkedListNumber = phoneNumber.getFromDB();
+
+            int i = 0;
+            String strtemp;
+            while (i < linkedListName.size) {
+                strtemp = linkedListName.get(i) + "   " + linkedListNumber.get(i);
+//                linkedListComb.add(strtemp);
+
+                if (strtemp.indexOf(text) != -1) {
+                }
+
+                i++;
+            }
+
 
         } else if (inpMENU == 5) {
             System.exit(0);
