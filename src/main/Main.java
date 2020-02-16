@@ -3,6 +3,7 @@ package main;
 import definition.Login;
 import definition.Name;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -10,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
         Login lgn = new Login();
         Scanner sc = new Scanner(System.in);
+        ArrayList arrayListName = new ArrayList<String>();
         Name nm = new Name();
 
 //        System.out.println();
@@ -44,7 +46,12 @@ public class Main {
 //            System.out.print("   ");
 //            int n = sc.nextInt();
 
-            nm.getFromDB("njk");
+            arrayListName = nm.getFromDB();
+            int i = 0;
+            while (i < arrayListName.size()) {
+                System.out.println(arrayListName.get(i));
+                i++;
+            }
         }
 //            }
 
