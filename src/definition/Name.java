@@ -3,10 +3,12 @@ package definition;
 import adt.NameADT;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class Name implements NameADT {
 
     String name;
+    ArrayList arrayList = new ArrayList();
 
     @Override
     public String addIntoDB(String name) {
@@ -21,19 +23,17 @@ public class Name implements NameADT {
     }
 
     @Override
-    public String getFromDB(String name) {
+    public ArrayList getFromDB(String name) {
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pms?autoReconnect=true&useSSL=false", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Contacts_Manager?autoReconnect=true&useSSL=false", "root", "root");
             Statement stmt = con.createStatement();
 
-            ResultSet rs = stmt.executeQuery("SELECT * FROM CONTACTS");
-
+            ResultSet rs = stmt.executeQuery("SELECT * FROM CONTACTS;");
+            System.out.println("");
             long phnno;
             while (rs.next()) {
                 name = rs.getString("name");
-                phnno = rs.getLong("phnno");
-
-                System.out.println(name + " " + phnno);
+                arrayList.add(name);
             }
 
 
@@ -41,6 +41,6 @@ public class Name implements NameADT {
             e.printStackTrace();
         }
 
-        return null;
+        return arrayList;
     }
 }

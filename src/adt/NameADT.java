@@ -1,6 +1,7 @@
 package adt;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public interface NameADT {
 
@@ -8,6 +9,6 @@ public interface NameADT {
 
     void delFromDB(String name);
 
-    String getFromDB(String name);
+    ArrayList getFromDB(String name);
 
 }
