@@ -70,6 +70,7 @@ public class Main {
 
             System.out.println("Search Text :-");
             String text = sc.next();
+            System.out.println();
 
             linkedListName = nm.getFromDB();
             linkedListNumber = phoneNumber.getFromDB();
