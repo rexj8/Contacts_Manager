@@ -31,11 +31,6 @@ public class PhoneNumber implements PhoneNumberADT {
     }
 
     @Override
-    public void delFromDB(String number) {
-
-    }
-
-    @Override
     public LinkedList<String> getFromDB() {
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Contacts_Manager?autoReconnect=true&useSSL=false", "root", "root");
