@@ -60,7 +60,7 @@ public class Main {
 
             System.out.println("Enter Number :-");
             String number = sc.next();
-            phoneNumber.addIntoDB(number);
+            phoneNumber.addIntoDB(number, name);
         } else if (inpMENU == 3) {
             System.out.println("Enter contact name which you have to REMOVE :-");
             String name = sc.next();
