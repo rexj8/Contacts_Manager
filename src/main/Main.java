@@ -68,24 +68,26 @@ public class Main {
             nm.delFromDB(name);
         } else if (inpMENU == 4) {
 
-            System.out.println("Enter the Searchable Text :-");
+            System.out.println("Search Text :-");
             String text = sc.next();
 
             linkedListName = nm.getFromDB();
             linkedListNumber = phoneNumber.getFromDB();
 
             int i = 0;
+            int count = 0;
             String strtemp;
             while (i < linkedListName.size) {
                 strtemp = linkedListName.get(i) + "   " + linkedListNumber.get(i);
 //                linkedListComb.add(strtemp);
 
                 if (strtemp.indexOf(text) != -1) {
+                    count += 1;
+                    System.out.println(strtemp);
                 }
-
                 i++;
             }
-
+            System.out.println("\n" + count + " results Found");
 
         } else if (inpMENU == 5) {
             System.exit(0);
