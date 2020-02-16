@@ -11,9 +11,23 @@ public class Name implements NameADT {
 
     @Override
     public String addIntoDB(String name) {
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/contacts_manager?autoReconnect=true&useSSL=false", "root", "root");
+            String qry = "INSERT INTO CONTACTS(NAME,PHNNO) VALUES(?,?);";
+            PreparedStatement pstmt = con.prepareStatement(qry);
 
+            pstmt.setString(1, name);
+            pstmt.setString(2, null);
+            pstmt.executeUpdate();
 
-        return null;
+//            System.out.println("               Successfully Added!!");
+
+        } catch (SQLIntegrityConstraintViolationException e) {
+            System.out.println("Name that you have entered is already exist");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return name;
     }
 
     @Override

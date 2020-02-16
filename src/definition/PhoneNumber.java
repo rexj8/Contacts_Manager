@@ -10,7 +10,7 @@ public class PhoneNumber implements PhoneNumberADT {
     LinkedList<String> linkedList = new LinkedList<>();
 
     @Override
-    public String addIntoDB(String number) {
+    public String addIntoDB(String number, String name) {
         return null;
     }
 

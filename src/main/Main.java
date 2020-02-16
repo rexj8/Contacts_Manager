@@ -48,23 +48,25 @@ public class Main {
             linkedListNumber = phoneNumber.getFromDB();
 
             int i = 0;
-            System.out.println(linkedListName.size);
+            System.out.println("\n" + linkedListName.size);
             while (i < linkedListName.size) {
                 System.out.println(linkedListName.get(i) + "   " + linkedListNumber.get(i));
                 i++;
             }
-        } else if (inpMENU == 4) {
-            int i = 0;
-            while (i < linkedListName.size) {
-                System.out.println(linkedListName.get(i) + "   " + linkedListNumber.get(i));
-                i++;
-            }
+        } else if (inpMENU == 2) {
+            System.out.println("Enter a NAME :-");
+            String name = sc.next();
+            nm.addIntoDB(name);
+
+            System.out.println("Enter Number :-");
+            String number = sc.next();
+        }
         }
 
-//            }
+
 
 //        }
 
-    }
+//    }
 
 }
