@@ -9,6 +9,6 @@ public interface NameADT {
 
     void delFromDB(String name);
 
-    ArrayList getFromDB(String name);
+    ArrayList getFromDB();
 
 }

@@ -23,7 +23,7 @@ public class Name implements NameADT {
     }
 
     @Override
-    public ArrayList getFromDB(String name) {
+    public ArrayList getFromDB() {
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Contacts_Manager?autoReconnect=true&useSSL=false", "root", "root");
             Statement stmt = con.createStatement();
