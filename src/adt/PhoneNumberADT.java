@@ -10,4 +10,6 @@ public interface PhoneNumberADT {
 
     ArrayList getFromDB();
 
+    String getNumber();
+
 }
