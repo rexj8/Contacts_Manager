@@ -19,6 +19,7 @@ public class Name implements NameADT {
             pstmt.setString(1, name);
             pstmt.setString(2, null);
             pstmt.executeUpdate();
+            this.name = name;
 
 //            System.out.println("               Successfully Added!!");
 

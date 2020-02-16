@@ -4,7 +4,7 @@ import definition.LinkedList;
 
 public interface PhoneNumberADT {
 
-    String addIntoDB(String number, String name);
+    String addIntoDB(String number);
 
     void delFromDB(String number);
 

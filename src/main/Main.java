@@ -60,6 +60,7 @@ public class Main {
 
             System.out.println("Enter Number :-");
             String number = sc.next();
+            phoneNumber.addIntoDB(number);
         }
         }
 

@@ -10,7 +10,23 @@ public class PhoneNumber implements PhoneNumberADT {
     LinkedList<String> linkedList = new LinkedList<>();
 
     @Override
-    public String addIntoDB(String number, String name) {
+    public String addIntoDB(String number) {
+        Name nm = new Name();
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/contacts_manager?autoReconnect=true&useSSL=false", "root", "root");
+            String qry = "UPDATE CONTACTS SET PHNNO = ? WHERE NAME='" + nm.name + "';";
+            PreparedStatement pstmt = con.prepareStatement(qry);
+
+            pstmt.setString(1, number);
+            pstmt.executeUpdate();
+
+            System.out.println("               Successfully Added!!");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
