@@ -34,6 +34,20 @@ public class Name implements NameADT {
     @Override
     public void delFromDB(String name) {
 
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pms?autoReconnect=true&useSSL=false", "root", "root");
+            String qry = "DELETE FROM CONTACTS WHERE NAME='?' ;";
+            PreparedStatement pstmt = con.prepareStatement(qry);
+
+            pstmt.setString(1, name);
+
+            pstmt.executeUpdate();
+
+            System.out.println("               Successfully Removed");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
