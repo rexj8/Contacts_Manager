@@ -52,7 +52,7 @@ public class Main {
                 System.out.println(linkedListName.get(i) + "   " + linkedListNumber.get(i));
                 i++;
             }
-            System.out.println("\n Total Contacts :-" + linkedListName.size);
+            System.out.println("\n Total Contacts :- " + linkedListName.size);
         } else if (inpMENU == 2) {
             System.out.println("Enter a NAME :-");
             String name = sc.next();
@@ -64,6 +64,7 @@ public class Main {
         } else if (inpMENU == 3) {
             System.out.println("Enter contact name which you have to REMOVE :-");
             String name = sc.next();
+            nm.delFromDB(name);
         } else if (inpMENU == 4) {
 
         } else if (inpMENU == 5) {
