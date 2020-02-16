@@ -1,6 +1,7 @@
 package main;
 
 import definition.Login;
+import definition.Name;
 
 import java.util.Scanner;
 
@@ -9,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Login lgn = new Login();
         Scanner sc = new Scanner(System.in);
+        Name nm = new Name();
 
         System.out.println();
         System.out.println("_______________Contacts_Manager_______________\n");
