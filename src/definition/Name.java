@@ -36,7 +36,7 @@ public class Name implements NameADT {
 
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pms?autoReconnect=true&useSSL=false", "root", "root");
-            String qry = "DELETE FROM CONTACTS WHERE NAME='?' ;";
+            String qry = "DELETE FROM CONTACTS WHERE NAME=? ;";
             PreparedStatement pstmt = con.prepareStatement(qry);
 
             pstmt.setString(1, name);

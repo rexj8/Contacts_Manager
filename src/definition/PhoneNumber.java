@@ -15,7 +15,7 @@ public class PhoneNumber implements PhoneNumberADT {
 
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/contacts_manager?autoReconnect=true&useSSL=false", "root", "root");
-            String qry = "UPDATE CONTACTS SET PHNNO = ? WHERE NAME='" + nm.name + "';";
+            String qry = "UPDATE CONTACTS SET PHNNO = ? WHERE NAME=" + nm.name + ";";
             PreparedStatement pstmt = con.prepareStatement(qry);
 
             pstmt.setString(1, number);

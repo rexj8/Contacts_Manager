@@ -64,7 +64,10 @@ public class Main {
         } else if (inpMENU == 3) {
             System.out.println("Enter contact name which you have to REMOVE :-");
             String name = sc.next();
+        } else if (inpMENU == 4) {
 
+        } else if (inpMENU == 5) {
+            System.exit(0);
         }
         }
 
