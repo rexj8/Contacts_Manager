@@ -2,6 +2,7 @@ package main;
 
 import definition.Login;
 import definition.Name;
+import definition.PhoneNumber;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,7 +13,9 @@ public class Main {
         Login lgn = new Login();
         Scanner sc = new Scanner(System.in);
         ArrayList arrayListName = new ArrayList<String>();
+        ArrayList arrayListNumber = new ArrayList<String>();
         Name nm = new Name();
+        PhoneNumber phoneNumber = new PhoneNumber();
 
 //        System.out.println();
 //        System.out.println("_______________Contacts_Manager_______________\n");
@@ -47,9 +50,11 @@ public class Main {
 //            int n = sc.nextInt();
 
             arrayListName = nm.getFromDB();
+            arrayListNumber = phoneNumber.getFromDB();
+
             int i = 0;
             while (i < arrayListName.size()) {
-                System.out.println(arrayListName.get(i));
+                System.out.println(arrayListName.get(i) + "   " + arrayListNumber.get(i));
                 i++;
             }
         }
