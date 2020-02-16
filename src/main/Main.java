@@ -48,11 +48,11 @@ public class Main {
             linkedListNumber = phoneNumber.getFromDB();
 
             int i = 0;
-            System.out.println("\n" + linkedListName.size);
             while (i < linkedListName.size) {
                 System.out.println(linkedListName.get(i) + "   " + linkedListNumber.get(i));
                 i++;
             }
+            System.out.println("\n Total Contacts :-" + linkedListName.size);
         } else if (inpMENU == 2) {
             System.out.println("Enter a NAME :-");
             String name = sc.next();
