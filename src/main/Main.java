@@ -1,10 +1,10 @@
 package main;
 
+import definition.LinkedList;
 import definition.Login;
 import definition.Name;
 import definition.PhoneNumber;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -14,8 +14,8 @@ public class Main {
         Name nm = new Name();
         PhoneNumber phoneNumber = new PhoneNumber();
         Scanner sc = new Scanner(System.in);
-        ArrayList arrayListName = new ArrayList<String>();
-        ArrayList arrayListNumber = new ArrayList<String>();
+        LinkedList<String> linkedListName = new LinkedList<String>();
+        LinkedList<String> linkedListNumber = new LinkedList<String>();
 
 //        System.out.println();
 //        System.out.println("_______________Contacts_Manager_______________\n");
@@ -44,16 +44,21 @@ public class Main {
         int inpMENU = sc.nextInt();
 
         if (inpMENU == 1) {
-            arrayListName = nm.getFromDB();
-            arrayListNumber = phoneNumber.getFromDB();
+            linkedListName = nm.getFromDB();
+            linkedListNumber = phoneNumber.getFromDB();
 
             int i = 0;
-            while (i < arrayListName.size()) {
-                System.out.println(arrayListName.get(i) + "   " + arrayListNumber.get(i));
+            System.out.println(linkedListName.size);
+            while (i < linkedListName.size) {
+                System.out.println(linkedListName.get(i) + "   " + linkedListNumber.get(i));
                 i++;
             }
         } else if (inpMENU == 4) {
-
+            int i = 0;
+            while (i < linkedListName.size) {
+                System.out.println(linkedListName.get(i) + "   " + linkedListNumber.get(i));
+                i++;
+            }
         }
 
 //            }

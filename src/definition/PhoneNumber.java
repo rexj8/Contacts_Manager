@@ -3,12 +3,11 @@ package definition;
 import adt.PhoneNumberADT;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 public class PhoneNumber implements PhoneNumberADT {
 
     String number;
-    ArrayList arrayList = new ArrayList();
+    LinkedList<String> linkedList = new LinkedList<>();
 
     @Override
     public String addIntoDB(String number) {
@@ -21,7 +20,7 @@ public class PhoneNumber implements PhoneNumberADT {
     }
 
     @Override
-    public ArrayList getFromDB() {
+    public LinkedList<String> getFromDB() {
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Contacts_Manager?autoReconnect=true&useSSL=false", "root", "root");
             Statement stmt = con.createStatement();
@@ -30,19 +29,32 @@ public class PhoneNumber implements PhoneNumberADT {
 
             while (rs.next()) {
                 number = rs.getString("phnno");
-                arrayList.add(number);
+                linkedList.add(number);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return arrayList;
+        return linkedList;
     }
 
     public String getNumber() {
         number = "";
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Contacts_Manager?autoReconnect=true&useSSL=false", "root", "root");
+            Statement stmt = con.createStatement();
 
+            ResultSet rs = stmt.executeQuery("SELECT * FROM CONTACTS;");
+
+            while (rs.next()) {
+                number = rs.getString("phnno");
+                linkedList.add(number);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return number;
     }
 }

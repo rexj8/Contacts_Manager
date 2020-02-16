@@ -3,12 +3,11 @@ package definition;
 import adt.NameADT;
 
 import java.sql.*;
-import java.util.ArrayList;
 
 public class Name implements NameADT {
 
     String name;
-    ArrayList arrayList = new ArrayList();
+    LinkedList<String> linkedList = new LinkedList<>();
 
     @Override
     public String addIntoDB(String name) {
@@ -23,7 +22,7 @@ public class Name implements NameADT {
     }
 
     @Override
-    public ArrayList getFromDB() {
+    public LinkedList<String> getFromDB() {
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Contacts_Manager?autoReconnect=true&useSSL=false", "root", "root");
             Statement stmt = con.createStatement();
@@ -32,14 +31,14 @@ public class Name implements NameADT {
 
             while (rs.next()) {
                 name = rs.getString("name");
-                arrayList.add(name);
+                linkedList.add(name);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return arrayList;
+        return linkedList;
     }
 
     public String getName() {

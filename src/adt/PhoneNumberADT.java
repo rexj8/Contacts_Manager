@@ -1,6 +1,6 @@
 package adt;
 
-import java.util.ArrayList;
+import definition.LinkedList;
 
 public interface PhoneNumberADT {
 
@@ -8,7 +8,7 @@ public interface PhoneNumberADT {
 
     void delFromDB(String number);
 
-    ArrayList getFromDB();
+    LinkedList<String> getFromDB();
 
     String getNumber();
 

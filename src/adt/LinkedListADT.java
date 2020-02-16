@@ -10,4 +10,6 @@ public interface LinkedListADT<E> {
     void sort();
 
     void print();
+
+    E get(int index);
 }

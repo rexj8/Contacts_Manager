@@ -4,7 +4,7 @@ import adt.LinkedListADT;
 
 public class LinkedList<E> implements LinkedListADT<E> {
     private Node<E> head = null;
-    private int size = 0;
+    public int size = 0;
 
     private Node<E> getNode(int index) {
         Node<E> response = head;
@@ -121,6 +121,16 @@ public class LinkedList<E> implements LinkedListADT<E> {
             System.out.print(data + (i < size - 1 ? ", " : ""));
         }
         System.out.println("]");
+    }
+
+    @Override
+    public E get(int index) {
+        String data = "";
+        for (int i = 0; i < index + 1; i++) {
+            // fetch the data for the current node
+            data = (String) this.getNode(i).getData();
+        }
+        return (E) data;
     }
 
     private static class Node<E> {

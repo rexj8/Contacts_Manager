@@ -1,6 +1,6 @@
 package adt;
 
-import java.util.ArrayList;
+import definition.LinkedList;
 
 public interface NameADT {
 
@@ -8,7 +8,7 @@ public interface NameADT {
 
     void delFromDB(String name);
 
-    ArrayList getFromDB();
+    LinkedList<String> getFromDB();
 
     String getName();
 
