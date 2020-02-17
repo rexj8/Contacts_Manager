@@ -76,7 +76,20 @@ public class Name implements NameADT {
 
     public String getName() {
         name = "";
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Contacts_Manager?autoReconnect=true&useSSL=false", "root", "root");
+            Statement stmt = con.createStatement();
 
+            ResultSet rs = stmt.executeQuery("SELECT * FROM CONTACTS;");
+
+            while (rs.next()) {
+                name = rs.getString("phnno");
+                linkedList.add(name);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return name;
     }
 }
