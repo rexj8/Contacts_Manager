@@ -35,7 +35,7 @@ public class Name implements NameADT {
     public void delFromDB(String name) {
 
         try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pms?autoReconnect=true&useSSL=false", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/contacts_manager?autoReconnect=true&useSSL=false", "root", "root");
             String qry = "DELETE FROM CONTACTS WHERE NAME=? ;";
             PreparedStatement pstmt = con.prepareStatement(qry);
 
@@ -44,7 +44,7 @@ public class Name implements NameADT {
             int row = pstmt.executeUpdate();
 
             System.out.println(row + " rows affected");
-//            System.out.println("               Successfully Removed");
+            System.out.println("               Successfully Removed");
 
         } catch (SQLException e) {
             e.printStackTrace();
