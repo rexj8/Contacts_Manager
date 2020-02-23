@@ -17,18 +17,18 @@ public class Main {
         LinkedList<String> linkedListName = new LinkedList<String>();
         LinkedList<String> linkedListNumber = new LinkedList<String>();
 
-//        System.out.println();
-//        System.out.println("_______________Contacts_Manager_______________\n");
-//        System.out.println("================");
-//        System.out.println("   LOGIN MENU   ");
-//        System.out.println("================");
-//
-//        System.out.println("Enter Login ID");
-//        String lgnID = sc.nextLine().toLowerCase();
-//        System.out.println("Enter Login Password :-");
-//        String lgnPswrd = sc.nextLine();
-//
-//        if (lgn.checkID(lgnID) && lgn.checkPswrd(lgnPswrd)) {
+       System.out.println();
+       System.out.println("_______________Contacts_Manager_______________\n");
+       System.out.println("================");
+       System.out.println("   LOGIN MENU   ");
+       System.out.println("================");
+
+       System.out.println("Enter Login ID");
+       String lgnID = sc.nextLine().toLowerCase();
+       System.out.println("Enter Login Password :-");
+       String lgnPswrd = sc.nextLine();
+
+       if (lgn.checkID(lgnID) && lgn.checkPswrd(lgnPswrd)) {
         System.out.println("                        Welcome Sir!");
 
             while (true) {
@@ -100,5 +100,5 @@ public class Main {
             }
     }
 
-//    }else{System.out.println("Enter valid input!!");}
+   }else{System.out.println("Enter valid input!!");}
 }
