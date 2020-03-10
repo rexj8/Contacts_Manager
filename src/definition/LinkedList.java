@@ -1,3 +1,5 @@
+// LINKEDLIST class
+
 package definition;
 
 import adt.LinkedListADT;
