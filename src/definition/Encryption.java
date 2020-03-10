@@ -1,3 +1,5 @@
+// ENCRYPTION class
+
 package definition;
 
 import adt.EncADT;
